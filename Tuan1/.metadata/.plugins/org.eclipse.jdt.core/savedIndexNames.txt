@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+E:\data\handout\KienTrucPhanMem\Labs\Tuan1\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3032932705.index
-1885654669.index
-2829848167.index
