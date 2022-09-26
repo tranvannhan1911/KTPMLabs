@@ -14,24 +14,31 @@ import com.example.springdatajpa.datajpa.entity.ChuyenBay;
 import com.example.springdatajpa.datajpa.repository.ChuyenBayRepository;
 
 @RestController
-@RequestMapping("/chuyen-bay")
-public class ChuyenBayController {
+@RequestMapping("")
+public class Controller {
 	@Autowired
 	private ChuyenBayRepository repo;
 
-	@GetMapping("")
-	public List<ChuyenBay> get() {
-		List<ChuyenBay> lstChuyenBay = (List<ChuyenBay>) repo.findAll();
+	@GetMapping("/chuyen-bay-toi-dalat")
+	public List<ChuyenBay> toDalat() {
+		List<ChuyenBay> lstChuyenBay = (List<ChuyenBay>) repo.findFlightsTo("DAD");
 		System.out.println(lstChuyenBay);
 		return lstChuyenBay;
 	}
+
+//	@GetMapping("/may-bay-lon-hon-10000")
+//	public List<ChuyenBay> greater10000() {
+//		List<ChuyenBay> lstChuyenBay = (List<ChuyenBay>) repo.findFlightsTo("DAD");
+//		System.out.println(lstChuyenBay);
+//		return lstChuyenBay;
+//	}
 	
 
-	@PostMapping("")
-	public ChuyenBay add(@RequestBody ChuyenBay chuyenBay) {
-		repo.save(chuyenBay);
-		System.out.println(chuyenBay);
-		return chuyenBay;
-	}
+//	@PostMapping("")
+//	public ChuyenBay add(@RequestBody ChuyenBay chuyenBay) {
+//		repo.save(chuyenBay);
+//		System.out.println(chuyenBay);
+//		return chuyenBay;
+//	}
 }
 
