@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  api-gateway:
+    image: tranvannhan1911/ktpm-api-gateway
+    ports:
+      - "80:80"
+    network_mode: host
